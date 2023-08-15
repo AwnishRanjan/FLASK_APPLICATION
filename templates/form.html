@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Average Marks Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+             background-color: rgb(0, 255, 55);              
+        }
+        .container {
+            width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid #131950;
+            border-radius: 5px;
+        }
+        .input-field {
+            margin-bottom: 15px;
+           
+            padding: 20px;
+            border: 1px solid #131950;
+            border-radius: 5px;
+        }
+        #marks {
+            width: 100%;
+            padding: 8px;
+            font-size: 16px;
+        }
+        .btn-calculate {
+            background-color: #007BFF;
+            color: rgb(85, 203, 93);
+            border:black;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div  action="{{url_for('form')}}">
+        <h2>Calculate Average Marks</h2>
+        <form method="post">
+            <div class="input-field">
+                <label for="marks">Enter your marks</label>
+                <input type="text" id="marks" name="maths" placeholder="maths">
+                <input type="text" id="marks" name="physics" placeholder="physics">
+                <input type="text" id="marks" name="chemistry" placeholder="chemistry">
+            </div>
+            <button class="btn-calculate" type="submit">Calculate</button>
+        </form>
+        
+    </div>
+    <div>
+          my score is {{score}}
+    </div>
+</body>
+</html>
